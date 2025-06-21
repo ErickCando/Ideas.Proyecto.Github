@@ -4,7 +4,7 @@
 * Familia Ranidae (ranas verdaderas)
 
 ## Q2. Brevemente describe que piensas hacer en tu proyecto?
-* Descargar genes presentes en la familia Ranidae, editar con Atom las secuncias y realizar una Filogenia concenso con nodos GCF
+* Descargar genes presentes en la familia Ranidae, editar con Atom las secuencias y realizar una Filogenia concenso con nodos GCF
 
 ## Q3. Que programas voy a usar en mi proyecto.
 * ./datasets download gene symbol
