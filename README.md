@@ -4,7 +4,7 @@
 * Madison Cando
 
 ## Propósito del proyecto
-*Este proyecto tiene como objetivo reconstruir la filogenia de la familia "Ranidae" utilizando cuatro genes nucleares ampliamente utilizados en estudios evolutivos: **RAG1**, **BDNF**, **POMC** y **TRPV4**. La información filogenética se generará a partir de árboles individuales por gen y se integrará en un árbol de especies utilizando el enfoque de coalescencia con **ASTRAL**.
+* Este proyecto tiene como objetivo reconstruir la filogenia de la familia "Ranidae" utilizando cuatro genes nucleares ampliamente utilizados en estudios evolutivos: **RAG1**, **BDNF**, **POMC** y **TRPV4**. La información filogenética se generará a partir de árboles individuales por gen y se integrará en un árbol de especies utilizando el enfoque de coalescencia con **ASTRAL**.
 
 ## Genes utilizados
 * RAG1 (Recombination Activating Gene 1)
@@ -30,12 +30,11 @@
 # 2. Preparación de las secuencias (edición manual previa al alineamiento)
 * Descargar la carpeta con los rna.fna. al computador personal del comando datasets
 * Abrir cada archivo en Atom y editar para dejar el nombre de la especie
+* Edita cada línea de encabezado (>) para que contenga solo el nombre de la especie
 - w+/letras
 - d+/numeros
 - s/espacios
 - ./signos 
-
-* Edita cada línea de encabezado (>) para que contenga solo el nombre de la especie 
 
 # 3. Alineamiento con MUSCLE
 * ./muscle3.8.31_i86linux64
