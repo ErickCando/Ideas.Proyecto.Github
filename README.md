@@ -30,7 +30,7 @@
 # 2. Preparación de las secuencias (edición manual previa al alineamiento)
 * Descargar la carpeta con los rna.fna. al computador personal del comando datasets
 * Abrir cada archivo en Atom y editar para dejar el nombre de la especie
-* Edita cada línea de encabezado (>) para que contenga solo el nombre de la especie
+* Editar cada línea de encabezado (>) para que contenga solo el nombre de la especie
 - w+/letras
 - d+/numeros
 - s/espacios
