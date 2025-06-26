@@ -1,10 +1,13 @@
-## Titulo: Filogenia molecular de la familia Ranidae usando múltiples genes nucleares
+## FILOGENIA MOLECULAR DE LA FAMILIA RANIDAE USANDO MULTIPLES GENES NUCLEARES
 
-## Autores
+## Autor
 * Madison Cando
 
 ## Propósito del proyecto
-* Este proyecto tiene como objetivo reconstruir la filogenia de la familia "Ranidae" utilizando cuatro genes nucleares ampliamente utilizados en estudios evolutivos: **RAG1**, **BDNF**, **POMC** y **TRPV4**. La información filogenética se generará a partir de árboles individuales por gen y se integrará en un árbol de especies utilizando el enfoque de coalescencia con **ASTRAL**.
+* Este proyecto tiene como objetivo reconstruir la filogenia de la familia *Ranidae* utilizando cuatro genes nucleares ampliamente utilizados en estudios evolutivos: **RAG1**, **BDNF**, **POMC** y **TRPV4**. La información filogenética se generará a partir de árboles individuales por gen y se integrará en un árbol de especies utilizando el enfoque de coalescencia con **ASTRAL**.
+
+## Objetivo
+* Identificar el ancestro común en la familia *Ranidae* que comparta los cuatro genes específicos mencionados, observar las variantes genéticas desde el ancestro común y su diversificación, la filogenia permitirá entender las relaciones evolutivas entre diferentes grupos de la familia *Ranidae*, además de identificar que genes se han mantenido través del tiempo evolutivo.
 
 ## Genes utilizados
 * RAG1 (Recombination Activating Gene 1)
