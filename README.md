@@ -25,12 +25,12 @@
 
 ## Procedimeinto de trabajo
 
-# 1. Descargar genes con NCBI datasets en Git bash
+## 1. Descargar genes con NCBI datasets en Git bash
 * ./datasets download gene symbol RAG1 BDNF POMC TRPV4 --species "Ranidae" --reference
 * Descomprimir los archivps con unzip
 * mover los cuatro rna.fna. a una sola carpeta
 
-# 2. Preparación de las secuencias (edición manual previa al alineamiento)
+## 2. Preparación de las secuencias (edición manual previa al alineamiento)
 * Descargar la carpeta con los rna.fna. al computador personal del comando datasets
 * Abrir cada archivo en Atom y editar para dejar el nombre de la especie
 * Editar cada línea de encabezado (>) para que contenga solo el nombre de la especie
@@ -39,24 +39,24 @@
 - s/espacios
 - ./signos 
 
-# 3. Alineamiento con MUSCLE
+## 3. Alineamiento con MUSCLE
 * ./muscle3.8.31_i86linux64
 - for filename in *.fna
 - do muscle3.8.31_i86linux64 -in $filename -out muscle_$filename -maxiters 1 -diags
 - done 
 
-# 4. Inferencia filogenética con IQ-TREE
+## 4. Inferencia filogenética con IQ-TREE
 * module load iqtree/2.2.2.6
 - for filename in muscle_*
 - do iqtree2 -s $filename
 - done
 * crear un archivo con los arboles cat *.treefile > All.trees
 
-# 5. Árbol de especies con ASTRAL
+## 5. Árbol de especies con ASTRAL
 * java -jar astral.5.7.8.jar 
 - java -jar astral -i All.trees -o Astral.Ranidae.tree
 
-# 6. Visualización con FigTree
+## 6. Visualización con FigTree
 * Abrir los archivos .treefile con FigTree para inspección.
 
 ## Requisitos del sistema
