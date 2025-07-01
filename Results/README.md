@@ -1,1 +1,0 @@
-# Resultados del análisis
