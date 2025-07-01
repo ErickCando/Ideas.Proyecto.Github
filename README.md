@@ -11,9 +11,8 @@
 
 ## Genes utilizados
 * RAG1 (Recombination Activating Gene 1)
-* BDNF (Brain-Derived Neurotrophic Factor)
+* CYBT (Citocromo b)
 * POMC (Pro-opiomelanocortina)
-* TRPV4 (Transient Receptor Potential Vanilloid 4)
 
 ## Herramientas utilizadas
 * datasets (NCBI CLI): descarga de secuencias genéticas por símbolo
@@ -25,35 +24,38 @@
 
 ## Procedimeinto de trabajo
 
-## 1. Descargar genes con NCBI datasets en Git bash
-* ./datasets download gene symbol RAG1 BDNF POMC TRPV4 --species "Ranidae" --reference
-* Descomprimir los archivps con unzip
-* mover los cuatro rna.fna. a una sola carpeta
+## 1. Descargar genes con NCBI datasets en hoffman
+* esearch -db nuccore -query "rag1[GENE] AND Ranidae[ORGN]" | efetch -format uid | head -n 100 | efetch -db nuccore -format fasta > rag1_Ranidae.fasta
+* esearch -db nuccore -query "cytb[GENE] AND Ranidae[ORGN]" | efetch -format uid | head -n 100 | efetch -db nuccore -format fasta > cytb_Ranidae.fasta
+* esearch -db nuccore -query "pomc[GENE] AND Ranidae[ORGN]" | efetch -format uid | head -n 100 | efetch -db nuccore -format fasta > pomc_Ranidae.fasta
+* mover los archivos fasta a una sola carpeta
+* en la carpeta agregar el programa *./muscle3.8.31_i86linux64* 
 
 ## 2. Preparación de las secuencias (edición manual previa al alineamiento)
-* Descargar la carpeta con los rna.fna. al computador personal del comando datasets
+* Descargar la carpeta con los archivos .fasta al computador personal
 * Abrir cada archivo en Atom y editar para dejar el nombre de la especie
-* Editar cada línea de encabezado (>) para que contenga solo el nombre de la especie
+* Editar cada línea de encabezado (>) para que contenga solo el ID, nombre de la especies y gen
 - w+/letras
 - d+/numeros
 - s/espacios
 - ./signos 
+* Una vez editado las secuencias en Atom, mover el documento con los archivos .fasta a hoffman
 
 ## 3. Alineamiento con MUSCLE
-* ./muscle3.8.31_i86linux64
-- for filename in *.fna
+* usar el progrema *./muscle3.8.31_i86linux64* con:
+- for filename in *.fasta
 - do muscle3.8.31_i86linux64 -in $filename -out muscle_$filename -maxiters 1 -diags
 - done 
 
 ## 4. Inferencia filogenética con IQ-TREE
-* module load iqtree/2.2.2.6
+* usar module load iqtree/2.2.2.6
 - for filename in muscle_*
 - do iqtree2 -s $filename
 - done
-* crear un archivo con los arboles cat *.treefile > All.trees
+* crear un archivo con los arboles usando cat *.treefile > All.trees
 
 ## 5. Árbol de especies con ASTRAL
-* java -jar astral.5.7.8.jar 
+* usar el programa java -jar astral.5.7.8.jar 
 - java -jar astral -i All.trees -o Astral.Ranidae.tree
 
 ## 6. Visualización con FigTree
