@@ -16,3 +16,6 @@
 * Concordancia multigénica: La presencia simultánea de RAG1, POMC y CYTB en las secuencias permitió resolver relaciones evolutivas que no serían claras con un solo gen, ya que combinan señales conservadas (RAG1), funcionales (POMC) y rápidas (CYTB)
 * Clados monofiléticos: Muchos grupos forman clados monofiléticos, lo que sugiere una herencia genética clara desde el ancestro común sin eventos de hibridación o transferencia horizontal evidentes en esos linajes
 
+## Filogenia con ID_Espeice_Gen
+![ ](https://photos.fife.usercontent.google.com/pw/AP1GczNOwzCFWaF3iinScBXWQ1xmInryyLaSVt0ylsnYqcSXSmZvv9NuDj3l_A=w353-h633-s-no-gm?authuser=0)
+
