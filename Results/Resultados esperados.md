@@ -20,5 +20,11 @@
 ![ ](https://i.ibb.co/993LFGNS/Filogenia-de-Ranidae-Genes.jpg)
 
 ## Secuencias editadas
+## cytb
+![ ](https://i.ibb.co/1tf2nTY4/Secuencias-Gen-cytb.png)
+
+## POMC
+![ ](https://i.ibb.co/9kpVVNRN/Secuencias-Gen-pomc.png)
+
 ## RAG1
 ![ ](https://i.ibb.co/PZgTDbdS/Secuancias-Gen-rag1.png)
