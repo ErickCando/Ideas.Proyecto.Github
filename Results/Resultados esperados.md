@@ -1,8 +1,8 @@
 ## Resultados esperados
-##Interpretación del árbol filogenético multigénico de Ranidae (RAG1, POMC y CYTB)
+## Interpretación del árbol filogenético multigénico de Ranidae (RAG1, POMC y CYTB)
 * El árbol filogenético generado a partir de la concatenación de los genes RAG1 (nuclear), POMC (nuclear) y CYTB (mitocondrial) permite una reconstrucción robusta de l>
 
-##Acestro común
+## Acestro común
 * La base del clado Ranidae en el árbol representa el ancestro común más reciente para todas las especies analizadas. Este nodo ancestral agrupa a las especies que com>
 
 ## Implicaciones biológicas
@@ -13,13 +13,13 @@
 
 ## Resultado de archivos fasta editados en Atom
 * Secuencias con el Gen cytb
-![ Resultados esperados ]("C:\Users\Madison\Desktop\Resultados esperados\Secuencias-Gen cytb.png")
+![Resultados esperados](C:\Users\Madison\Desktop\Resultados esperados\Secuencias-Gen cytb.png)
 
 * secuencias con el Gen pomc
-![ Resultados esperados ]("C:\Users\Madison\Desktop\Resultados esperados\Secuencias-Gen pomc.png")
+![Resultados esperados](C:\Users\Madison\Desktop\Resultados esperados\Secuencias-Gen pomc.png)
 
 * Secuencias con EL Gen RAG1
-![ Resultados esperados ]("C:\Users\Madison\Desktop\Resultados esperados\Secuancias-Gen rag1.png")
+![Resultados esperados](C:\Users\Madison\Desktop\Resultados esperados\Secuancias-Gen rag1.png)
 
 ## Arbol filogenetico con ID_Especie_Gen
-![ Resultados esperados ]("C:\Users\Madison\Desktop\Resultados esperados\Filogenia de Ranidae-Genes.jpg")
+![Resultados esperados](C:\Users\Madison\Desktop\Resultados esperados\Filogenia de Ranidae-Genes.jpg)
