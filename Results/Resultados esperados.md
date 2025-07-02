@@ -17,7 +17,8 @@
 * Clados monofiléticos: Muchos grupos forman clados monofiléticos, lo que sugiere una herencia genética clara desde el ancestro común sin eventos de hibridación o transferencia horizontal evidentes en esos linajes
 
 ## Filogenia con ID_Espeice_Gen
-![ ](https://photos.fife.usercontent.google.com/pw/AP1GczNOwzCFWaF3iinScBXWQ1xmInryyLaSVt0ylsnYqcSXSmZvv9NuDj3l_A=w353-h633-s-no-gm?authuser=0)
+![ ](https://i.ibb.co/993LFGNS/Filogenia-de-Ranidae-Genes.jpg)
 
 ## Secuencias editadas
-![ ](https://photos.fife.usercontent.google.com/pw/AP1GczPO7-7qVk791RZdB39W86HkQLNZqtEGfBPoO1An_WE8fA_sudwXBhjBCw=w930-h633-s-no-gm?authuser=0)
+## RAG1
+![ ](https://i.ibb.co/PZgTDbdS/Secuancias-Gen-rag1.png)
