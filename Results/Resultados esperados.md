@@ -19,3 +19,5 @@
 ## Filogenia con ID_Espeice_Gen
 ![ ](https://photos.fife.usercontent.google.com/pw/AP1GczNOwzCFWaF3iinScBXWQ1xmInryyLaSVt0ylsnYqcSXSmZvv9NuDj3l_A=w353-h633-s-no-gm?authuser=0)
 
+## Secuencias editadas
+![ ](https://photos.fife.usercontent.google.com/pw/AP1GczPO7-7qVk791RZdB39W86HkQLNZqtEGfBPoO1An_WE8fA_sudwXBhjBCw=w930-h633-s-no-gm?authuser=0)
