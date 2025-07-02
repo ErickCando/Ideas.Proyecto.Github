@@ -10,16 +10,9 @@
 * Las especies que comparten mayor similitud en los tres genes analizados presentan relaciones más cercanas, lo que puede reflejar linajes recientes o baja presión selectiva divergente
 * Este enfoque multigénico aporta mayor resolución filogenética, especialmente útil para entender la evolución de rasgos como la reproducción, comportamiento o distribución ecológica dentro del grupo
 
+## Diversificación y estructura del árbol
+* Estructura jerárquica: Las ramas descendientes del nodo basal reflejan una radiación evolutiva progresiva, con múltiples bifurcaciones que indican eventos de especiación
+* Agrupamiento por género: En varios casos, especies del mismo género (como Rana, Lithobates, o Amolops) se agruparon de forma consistente, lo que respalda la validez de las clasificaciones taxonómicas actuales
+* Concordancia multigénica: La presencia simultánea de RAG1, POMC y CYTB en las secuencias permitió resolver relaciones evolutivas que no serían claras con un solo gen, ya que combinan señales conservadas (RAG1), funcionales (POMC) y rápidas (CYTB)
+* Clados monofiléticos: Muchos grupos forman clados monofiléticos, lo que sugiere una herencia genética clara desde el ancestro común sin eventos de hibridación o transferencia horizontal evidentes en esos linajes
 
-## Resultado de archivos fasta editados en Atom
-* Secuencias con el Gen cytb
-![ ](C:\Users\Madison\Desktop\Resultados esperados\Secuencias-Gen cytb.png)
-
-* secuencias con el Gen pomc
-![ ](C:\Users\Madison\Desktop\Resultados esperados\Secuencias-Gen pomc.png)
-
-* Secuencias con EL Gen RAG1
-![ ](C:\Users\Madison\Desktop\Resultados esperados\Secuancias-Gen rag1.png)
-
-## Arbol filogenetico con ID_Especie_Gen
-![ ](C:\Users\Madison\Desktop\Resultados esperados\Filogenia de Ranidae-Genes.jpg)
