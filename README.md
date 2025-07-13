@@ -27,14 +27,15 @@ Primero, se accede al sistema remoto utilizando el siguiente comando:
 ssh dechavez@hoffman2.idre.ucla.edu
 
 # 2. Solicitud de un nodo de cómputo
-Una vez dentro, se solicita un nodo de trabajo con:
-qrsh
+* Una vez dentro, se solicita un nodo de trabajo con: qrsh -l h_data=30G,h_rt=1:00:00
+* Entrar a cd /u/scratch/d/dechavez/Bioinformatica-PUCE/RepotenBio/MadisonCa/ProyectoF
+* Crear un directorio con mkdir -p Secuencias_muscle
+* Entrar con cd Secuencias_muscle
 
 # 3. Descargar genes con NCBI datasets en hoffman
 * /u/scratch/d/dechavez/Bioinformatica-PUCE/MastBio/edirect/esearch -db nuccore -query "rag1[GENE] AND Ranidae[ORGN]" | efetch -format uid | head -n 70 | efetch -db nuccore -format fasta > rag1_Ranidae.fasta
 * /u/scratch/d/dechavez/Bioinformatica-PUCE/MastBio/edirect/esearch -db nuccore -query "cytb[GENE] AND Ranidae[ORGN]" | efetch -format uid | head -n 70 | efetch -db nuccore -format fasta > cytb_Ranidae.fasta
 * /u/scratch/d/dechavez/Bioinformatica-PUCE/MastBio/edirect/esearch -db nuccore -query "pomc[GENE] AND Ranidae[ORGN]" | efetch -format uid | head -n 70 | efetch -db nuccore -format fasta > pomc_Ranidae.fasta
-* mover los archivos fasta a una sola carpeta
 
 # 4. Preparación de las secuencias (edición en hoffman del alineamiento)
 * Copiar muscle3.8.31_i86linux64 a la carpeta
@@ -61,9 +62,9 @@ qrsh
 * scp dechavez@hoffman2.idre.ucla.edu:/u/scratch/d/dechavez/Bioinformatica-PUCE/RepotenBio/MadisonCa/ProyectoF/Secuencias_muscle/Ranidae.All.trees .
 
 # Abrirlo con FigTree para inspección
+* Elegir la opcion Trees y marcar la opcion Transform branches
 
 # Requisitos del sistema
-
 * Unix/Linux
 * ./muscle3.8.31_i86linux64*
 * iqtree/2.2.2.6
