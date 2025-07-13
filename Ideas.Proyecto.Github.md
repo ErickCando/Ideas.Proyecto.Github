@@ -8,11 +8,8 @@
 
 ## Q3. Que programas voy a usar en mi proyecto.
 * ./datasets download gene symbol
-* unzip
 * muscle3.8.31_i86linux64
 * module load iqtree/2.2.2.6
-* astral.5.7.8.jar
-* Atom (editor)
 * FigTree
 
 ## Q4. Sube una foto que represente tu organismo o grupo de organismo.
