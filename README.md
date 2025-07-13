@@ -18,28 +18,21 @@
 * datasets (NCBI CLI): descarga de secuencias genéticas por símbolo
 * muscle3.8.31_i86linux64: alineamiento de secuencias por gen
 * iqtree/2.2.2.6: inferencia filogenética por gen
-* astral.5.7.8.jar: inferencia del árbol de especies
-* Atom: edición de scripts y archivos
 * FigTree: visualización y edición gráfica de árboles filogenéticos
 
 ## Procedimeinto de trabajo
 
 ## 1. Descargar genes con NCBI datasets en hoffman
-* esearch -db nuccore -query "rag1[GENE] AND Ranidae[ORGN]" | efetch -format uid | head -n 100 | efetch -db nuccore -format fasta > rag1_Ranidae.fasta
-* esearch -db nuccore -query "cytb[GENE] AND Ranidae[ORGN]" | efetch -format uid | head -n 100 | efetch -db nuccore -format fasta > cytb_Ranidae.fasta
-* esearch -db nuccore -query "pomc[GENE] AND Ranidae[ORGN]" | efetch -format uid | head -n 100 | efetch -db nuccore -format fasta > pomc_Ranidae.fasta
+* /u/scratch/d/dechavez/Bioinformatica-PUCE/MastBio/edirect/esearch -db nuccore -query "rag1[GENE] AND Ranidae[ORGN]" | efetch -format uid | head -n 70 | efetch -db nuccore -format fasta > rag1_Ranidae.fasta
+* /u/scratch/d/dechavez/Bioinformatica-PUCE/MastBio/edirect/esearch -db nuccore -query "cytb[GENE] AND Ranidae[ORGN]" | efetch -format uid | head -n 70 | efetch -db nuccore -format fasta > cytb_Ranidae.fasta
+* /u/scratch/d/dechavez/Bioinformatica-PUCE/MastBio/edirect/esearch -db nuccore -query "pomc[GENE] AND Ranidae[ORGN]" | efetch -format uid | head -n 70 | efetch -db nuccore -format fasta > pomc_Ranidae.fasta
 * mover los archivos fasta a una sola carpeta
-* en la carpeta agregar el programa *./muscle3.8.31_i86linux64* 
 
-## 2. Preparación de las secuencias (edición manual previa al alineamiento)
-* Descargar la carpeta con los archivos .fasta al computador personal
-* Abrir cada archivo en Atom y editar para dejar el nombre de la especie
-* Editar cada línea de encabezado (>) para que contenga solo el ID, nombre de la especies y gen
-- w+/letras
-- d+/numeros
-- s/espacios
-- ./signos 
-* Una vez editado las secuencias en Atom, mover el documento con los archivos .fasta a hoffman
+# 2. Preparación de las secuencias (edición en hoffman del alineamiento)
+* Copiar muscle3.8.31_i86linux64 a la carpeta
+* perl -pe 's/(>\w+.\d)\s(\w+)\s(\w+).*/\1_\2_\3/g' cytb_Ranidae.fasta > Ranidae.cytb.fasta
+* perl -pe 's/(>\w+.\d)\s(\w+)\s(\w+).*/\1_\2_\3/g' rag1_Ranidae.fasta > Ranidae.rag1.fasta
+* perl -pe 's/(>\w+.\d)\s(\w+)\s(\w+).*/\1_\2_\3/g' pomc_Ranidae.fasta > Ranidae.pomc.fasta
 
 ## 3. Alineamiento con MUSCLE
 * usar el progrema *./muscle3.8.31_i86linux64* con:
@@ -51,15 +44,18 @@
 * usar module load iqtree/2.2.2.6
 - for filename in muscle_*
 - do iqtree2 -s $filename
-- done
-* crear un archivo con los arboles usando cat *.treefile > All.trees
+- done 
 
-## 5. Árbol de especies con ASTRAL
-* usar el programa java -jar astral.5.7.8.jar 
-- java -jar astral -i All.trees -o Astral.Ranidae.tree
+## 5. Combinar árboles
+cat *.treefile > Ranidae.All.trees
 
-## 6. Visualización con FigTree
-* Abrir los archivos .treefile con FigTree para inspección.
+## Final
+## Filogenia completada
+
+## Descarga Ranidae.All.trees desde Hoffman a tu computador personal
+* scp dechavez@hoffman2.idre.ucla.edu:/u/scratch/d/dechavez/Bioinformatica-PUCE/RepotenBio/MadisonCa/ProyectoF/Secuencias_muscle/
+
+## Abrirlo con FigTree para inspección
 
 ## Requisitos del sistema
 
