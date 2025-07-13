@@ -1,57 +1,52 @@
-## Script de filogenia
+  GNU nano 8.3                                                                            ProyectoFinal.sh
+# Programas
 
-## Procedimeinto de trabajo
+cd /u/scratch/d/dechavez/Bioinformatica-PUCE/RepotenBio/MadisonCa/ProyectoF
+mkdir -p Secuencias_muscle
+cd Secuencias_muscle
 
-## 1. Descargar genes con NCBI datasets en hoffman 
-* Usar el comando en hoffman 
+# Descargar genes con edirect
 
-* MastBio/edirect/esearch -db nuccore -query "rag1[GENE] AND Ranidae[ORGN]" | efetch -format uid | head -n 100 | efetch -db nuccore -format fasta > rag1_Ranidae.fasta
-* MastBio/edirect/esearch -db nuccore -query "cytb[GENE] AND Ranidae[ORGN]" | efetch -format uid | head -n 100 | efetch -db nuccore -format fasta > cytb_Ranidae.fasta
-* MastBio/edirect/esearch -db nuccore -query "pomc[GENE] AND Ranidae[ORGN]" | efetch -format uid | head -n 100 | efetch -db nuccore -format fasta > pomc_Ranidae.fasta
-* mover los archivos fasta a una sola nueva carpeta
-* en la carpeta agregar el programa *./muscle3.8.31_i86linux64*
+/u/scratch/d/dechavez/Bioinformatica-PUCE/MastBio/edirect/esearch -db nuccore -query "rag1[GENE] AND Ranidae[ORGN]" | efetch -format uid | head -n 70 | efetch -db nuccore -format fasta > rag1$
+/u/scratch/d/dechavez/Bioinformatica-PUCE/MastBio/edirect/esearch -db nuccore -query "cytb[GENE] AND Ranidae[ORGN]" | efetch -format uid | head -n 70 | efetch -db nuccore -format fasta > cytb$
+/u/scratch/d/dechavez/Bioinformatica-PUCE/MastBio/edirect/esearch -db nuccore -query "pomc[GENE] AND Ranidae[ORGN]" | efetch -format uid | head -n 70 | efetch -db nuccore -format fasta > pomc$
 
-## 2. Preparación de las secuencias (edición manual previa al alineamiento)
-* Descargar la carpeta con los archivos `.fasta` desde hoffman al computador personal
-* Abrir cada archivo en Atom y editar para dejar la línea de encabezado (>) junto con el ID, nombre de la especies y Gen
-- w+/letras
-- d+/numeros
-- s/espacios
-- ./signos
-* Una vez editado las secuencias en Atom, mover el documento con los archivos `.fasta` a hoffman
+# Organizar carpeta con MUSCLE2
 
-## 3. Alineamiento con MUSCLE
-* usar el progrema *./muscle3.8.31_i86linux64* con:
-- for filename in *.fasta
-- do muscle3.8.31_i86linux64 -in $filename -out muscle_$filename -maxiters 1 -diags
-- done
+## Crear carpeta nueva para mantener orden
+cp ../../muscle3.8.31_i86linux64 .
+perl -pe 's/(>\w+.\d)\s(\w+)\s(\w+).*/\1_\2_\3/g' cytb_Ranidae.fasta > Ranidae.cytb.fasta
+perl -pe 's/(>\w+.\d)\s(\w+)\s(\w+).*/\1_\2_\3/g' rag1_Ranidae.fasta > Ranidae.rag1.fasta
+perl -pe 's/(>\w+.\d)\s(\w+)\s(\w+).*/\1_\2_\3/g' pomc_Ranidae.fasta > Ranidae.pomc.fasta
 
-## 4. Inferencia filogenética con IQ-TREE
-* usar module load iqtree/2.2.2.6
-- for filename in muscle_*
-- do iqtree2 -s $filename
-- done
-* crear un archivo con los arboles usando cat *.treefile > All.trees
 
-## 5. Árbol de especies con ASTRAL
-* usar el programa java -jar astral.5.7.8.jar
-- java -jar astral -i All.trees -o Astral.Ranidae.tree
+# Alineamiento con MUSCLE
+for filename in *.fasta
+do ./muscle3.8.31_i86linux64 -in $filename -out muscle_$filename -maxiters 1 -diags
+done
 
-## 6. Visualización con FigTree
-* bajar el archivo `Astral.Ranidae.tree` desde hoffman al computador personal 
-* Abrir el archivo `Astral.Ranidae.tree` con FigTree para inspección.
+# Inferencia con IQ-TREE
+module load iqtree/2.2.2.6
+for filename in muscle_*.fasta
+do iqtree2 -s $filename
+done
+
+# Combinar árboles
+cat *.treefile > Ranidae.All.trees
+
+# Final
+## Filogenia completada
+## Descarga Ranidae.All.trees desde Hoffman a tu computador personal
+*scp dechavez@hoffman2.idre.ucla.edu:/u/scratch/d/dechavez/Bioinformatica-PUCE/RepotenBio/MadisonCa/ProyectoF/Secuencias_muscle/
+## Abrirlo con FigTree para inspección
 
 ## Herramientas utilizadas
-* datasets (NCBI CLI): descarga de secuencias genéticas por símbolo
-* muscle3.8.31_i86linux64: alineamiento de secuencias por gen
-* iqtree/2.2.2.6: inferencia filogenética por gen
-* astral.5.7.8.jar: inferencia del árbol de especies
-* Atom: edición de scripts y archivos
-* FigTree: visualización y edición gráfica de árboles filogenéticos
+datasets (NCBI CLI): descarga de secuencias genéticas por símbolo
+muscle3.8.31_i86linux64: alineamiento de secuencias por gen
+iqtree/2.2.2.6: inferencia filogenética por gen
+FigTree: visualización y edición gráfica de árboles filogenéticos
 
 ## Requisitos del sistema
-
-* Unix/Linux
-* Java (para ASTRAL)
-* Acceso a terminal con bash
-* Conexión a internet para descarga de datos
+Unix/Linux
+Acceso a terminal con bash
+Conexión a internet para descarga de datos
