@@ -33,11 +33,13 @@ do iqtree2 -s $filename
 done
 
 # Combinar árboles
-cat *.treefile > Ranidae.All.trees
+cat *.treefile > All.trees
 
-# Final
-## Filogenia completada
-## Descarga Ranidae.All.trees desde Hoffman a tu computador personal
-# scp dechavez@hoffman2.idre.ucla.edu:/u/scratch/d/dechavez/Bioinformatica-PUCE/RepotenBio/MadisonCa/ProyectoF/Secuencias_muscle/Ranidae.All.trees .
+# Convertir a Astral
+astral=/u/scratch/d/dechavez/Bioinformatica-PUCE/RepotenBio/OneHundred.Genes.Canids/Astral/astral.5.7.8.jar
+java -jar $astral -i All.trees -o Astral.Ranidae.tree
+
+## Final
+## Descarga Astral.Ranidae.trees desde Hoffman a tu computador personal
+# scp dechavez@hoffman2.idre.ucla.edu:/u/scratch/d/dechavez/Bioinformatica-PUCE/RepotenBio/MadisonCa/ProyectoF/Secuencias_muscle/Astral.Ranidae.trees .
 ## Abrirlo con FigTree para inspección
-# Elegir la opcion Trees y marcar la opcion Transform branches
