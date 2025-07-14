@@ -39,3 +39,4 @@ cat *.treefile > Ranidae.All.trees
 ## Descarga Ranidae.All.trees desde Hoffman a tu computador personal
 # scp dechavez@hoffman2.idre.ucla.edu:/u/scratch/d/dechavez/Bioinformatica-PUCE/RepotenBio/MadisonCa/ProyectoF/Secuencias_muscle/Ranidae.All.trees .
 ## Abrirlo con FigTree para inspección
+# Elegir la opcion Trees y marcar la opcion Transform branches
