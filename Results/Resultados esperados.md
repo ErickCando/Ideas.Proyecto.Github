@@ -17,14 +17,14 @@
 * Clados monofiléticos: Muchos grupos forman clados monofiléticos, lo que sugiere una herencia genética clara desde el ancestro común sin eventos de hibridación o transferencia horizontal evidentes en esos linajes
 
 ## Filogenia con ID_Espeice
-![ ](https://i.ibb.co/Zp8nF9Z6/Ranidae-All-trees.jpg)
+![ ](https://i.ibb.co/1tchWxXT/Astral-Ranidae-tree.jpg)
 
 ## Secuencias editadas
 ## Gen cytb
-![ ](https://i.ibb.co/PGYfY2pb/Captura-de-pantalla-2025-07-13-124424.png)
+![ ](https://i.ibb.co/xSFcpQPZ/Captura-de-pantalla-2025-07-15-224704.png)
 
 ## Gen POMC
-![ ](https://i.ibb.co/JWDpqP8j/Captura-de-pantalla-2025-07-13-124523.png)
+![ ](https://i.ibb.co/k6PXZzpx/Captura-de-pantalla-2025-07-15-224727.png)
 
 ## Gen RAG1
-![ ](https://i.ibb.co/xK35Y5Nw/Captura-de-pantalla-2025-07-13-124550.png)
+![ ](https://i.ibb.co/pYjCJ8f/Captura-de-pantalla-2025-07-15-224923.png)
