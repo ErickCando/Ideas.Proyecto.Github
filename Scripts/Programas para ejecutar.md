@@ -6,11 +6,12 @@
 
 # Descargar genes con edirect
 
-* /u/scratch/d/dechavez/Bioinformatica-PUCE/MastBio/edirect/esearch -db nuccore -query "rag1[GENE] AND Ranidae[ORGN]" | efetch -format uid | head -n 30 | efetch -db nuccore -format fasta > rag1$
-* /u/scratch/d/dechavez/Bioinformatica-PUCE/MastBio/edirect/esearch -db nuccore -query "cytb[GENE] AND Ranidae[ORGN]" | efetch -format uid | head -n 30 | efetch -db nuccore -format fasta > cytb$
-* /u/scratch/d/dechavez/Bioinformatica-PUCE/MastBio/edirect/esearch -db nuccore -query "pomc[GENE] AND Ranidae[ORGN]" | efetch -format uid | head -n 30 | efetch -db nuccore -format fasta > pomc$
+* /u/scratch/d/dechavez/Bioinformatica-PUCE/MastBio/edirect/esearch -db nuccore -query "rag1[GENE] AND Ranidae[ORGN]" | efetch -format uid | head -n 30 | efetch -db nuccore -format fasta > rag1_Ranidae.fasta
+* /u/scratch/d/dechavez/Bioinformatica-PUCE/MastBio/edirect/esearch -db nuccore -query "cytb[GENE] AND Ranidae[ORGN]" | efetch -format uid | head -n 30 | efetch -db nuccore -format fasta > cytb_Ranidae.fasta
+* /u/scratch/d/dechavez/Bioinformatica-PUCE/MastBio/edirect/esearch -db nuccore -query "pomc[GENE] AND Ranidae[ORGN]" | efetch -format uid | head -n 30 | efetch -db nuccore -format fasta > pomc_Ranidae.fasta
 
-# Organizar carpeta con MUSCLE2
+
+# Organizar carpeta con MUSCLE
 
 ## Crear carpeta nueva para mantener orden
 * cp ../../muscle3.8.31_i86linux64 .
