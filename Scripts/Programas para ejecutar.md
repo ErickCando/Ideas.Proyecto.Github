@@ -41,7 +41,7 @@
 # Descarga Astral.Ranidae.trees desde Hoffman a tu computador personal
 * scp dechavez@hoffman2.idre.ucla.edu:/u/scratch/d/dechavez/Bioinformatica-PUCE/RepotenBio/MadisonCa/ProyectoF/Secuencias_muscle/Astral.Ranidae.trees .
 ## Abrirlo con FigTree para inspección
-* Modificar el tañamo de las ramas y etiqueta para mejor observacion 
+* Modificar el tamaño de las ramas y etiquetas para mejor observacion 
 
 
 ## Herramientas utilizadas
