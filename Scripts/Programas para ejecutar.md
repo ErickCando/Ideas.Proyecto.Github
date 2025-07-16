@@ -7,17 +7,17 @@
 
 # Descargar genes con edirect
 
-* /u/scratch/d/dechavez/Bioinformatica-PUCE/MastBio/edirect/esearch -db nuccore -query "rag1[GENE] AND Ranidae[ORGN]" | efetch -format uid | head -n 70 | efetch -db nuccore -format fasta > rag1$
-* /u/scratch/d/dechavez/Bioinformatica-PUCE/MastBio/edirect/esearch -db nuccore -query "cytb[GENE] AND Ranidae[ORGN]" | efetch -format uid | head -n 70 | efetch -db nuccore -format fasta > cytb$
-* /u/scratch/d/dechavez/Bioinformatica-PUCE/MastBio/edirect/esearch -db nuccore -query "pomc[GENE] AND Ranidae[ORGN]" | efetch -format uid | head -n 70 | efetch -db nuccore -format fasta > pomc$
+* /u/scratch/d/dechavez/Bioinformatica-PUCE/MastBio/edirect/esearch -db nuccore -query "rag1[GENE] AND Ranidae[ORGN]" | efetch -format uid | head -n 30 | efetch -db nuccore -format fasta > rag1$
+* /u/scratch/d/dechavez/Bioinformatica-PUCE/MastBio/edirect/esearch -db nuccore -query "cytb[GENE] AND Ranidae[ORGN]" | efetch -format uid | head -n 30 | efetch -db nuccore -format fasta > cytb$
+* /u/scratch/d/dechavez/Bioinformatica-PUCE/MastBio/edirect/esearch -db nuccore -query "pomc[GENE] AND Ranidae[ORGN]" | efetch -format uid | head -n 30 | efetch -db nuccore -format fasta > pomc$
 
 # Organizar carpeta con MUSCLE2
 
 ## Crear carpeta nueva para mantener orden
 * cp ../../muscle3.8.31_i86linux64 .
-* perl -pe 's/(>\w+.\d)\s(\w+)\s(\w+).*/\1_\2_\3/g' cytb_Ranidae.fasta > Ranidae.cytb.fasta
-* perl -pe 's/(>\w+.\d)\s(\w+)\s(\w+).*/\1_\2_\3/g' rag1_Ranidae.fasta > Ranidae.rag1.fasta
-* perl -pe 's/(>\w+.\d)\s(\w+)\s(\w+).*/\1_\2_\3/g' pomc_Ranidae.fasta > Ranidae.pomc.fasta
+* perl -pe 's/(>\w+.\d)\s(\w+)\s(\w+).*/\1_\2_\3_cytb/g' cytb_Ranidae.fasta > Ranidae.cytb.fasta
+* perl -pe 's/(>\w+.\d)\s(\w+)\s(\w+).*/\1_\2_\3_rag1/g' rag1_Ranidae.fasta > Ranidae.rag1.fasta
+* perl -pe 's/(>\w+.\d)\s(\w+)\s(\w+).*/\1_\2_\3_pomc/g' pomc_Ranidae.fasta > Ranidae.pomc.fasta
 
 
 # Alineamiento con MUSCLE
@@ -34,16 +34,21 @@
 # Combinar árboles
 * cat *.treefile > Ranidae.All.trees
 
-# Final
-## Filogenia completada
-## Descarga Ranidae.All.trees desde Hoffman a tu computador personal
-* scp dechavez@hoffman2.idre.ucla.edu:/u/scratch/d/dechavez/Bioinformatica-PUCE/RepotenBio/MadisonCa/ProyectoF/Secuencias_muscle/
+# Convertir a Astral
+* astral=/u/scratch/d/dechavez/Bioinformatica-PUCE/RepotenBio/OneHundred.Genes.Canids/Astral/astral.5.7.8.jar
+* java -jar $astral -i All.trees -o Astral.Ranidae.tree
+
+# Descarga Astral.Ranidae.trees desde Hoffman a tu computador personal
+* scp dechavez@hoffman2.idre.ucla.edu:/u/scratch/d/dechavez/Bioinformatica-PUCE/RepotenBio/MadisonCa/ProyectoF/Secuencias_muscle/Astral.Ranidae.trees .
 ## Abrirlo con FigTree para inspección
+* Modificar el tañamo de las ramas y etiqueta para mejor observacion 
+
 
 ## Herramientas utilizadas
 * datasets (NCBI CLI): descarga de secuencias genéticas por símbolo
 * muscle3.8.31_i86linux64: alineamiento de secuencias por gen
 * iqtree/2.2.2.6: inferencia filogenética por gen
+* astral.5.7.8.jar: construir filogenia apartir de multiples arboles genicos
 * FigTree: visualización y edición gráfica de árboles filogenéticos
 
 ## Requisitos del sistema
