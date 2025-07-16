@@ -8,17 +8,17 @@ mkdir -p Secuencias_muscle
 cd Secuencias_muscle
 
 # Descargar genes con edirect
-/u/scratch/d/dechavez/Bioinformatica-PUCE/MastBio/edirect/esearch -db nuccore -query "rag1[GENE] AND Ranidae[ORGN]" | efetch -format uid | head -n 70 | efetch -db nuccore -format fasta > rag1_Ranidae.fasta
-/u/scratch/d/dechavez/Bioinformatica-PUCE/MastBio/edirect/esearch -db nuccore -query "cytb[GENE] AND Ranidae[ORGN]" | efetch -format uid | head -n 70 | efetch -db nuccore -format fasta > cytb_Ranidae.fasta
-/u/scratch/d/dechavez/Bioinformatica-PUCE/MastBio/edirect/esearch -db nuccore -query "pomc[GENE] AND Ranidae[ORGN]" | efetch -format uid | head -n 70 | efetch -db nuccore -format fasta > pomc_Ranidae.fasta
+/u/scratch/d/dechavez/Bioinformatica-PUCE/MastBio/edirect/esearch -db nuccore -query "rag1[GENE] AND Ranidae[ORGN]" | efetch -format uid | head -n 30 | efetch -db nuccore -format fasta > rag1_Ranidae.fasta
+/u/scratch/d/dechavez/Bioinformatica-PUCE/MastBio/edirect/esearch -db nuccore -query "cytb[GENE] AND Ranidae[ORGN]" | efetch -format uid | head -n 30 | efetch -db nuccore -format fasta > cytb_Ranidae.fasta
+/u/scratch/d/dechavez/Bioinformatica-PUCE/MastBio/edirect/esearch -db nuccore -query "pomc[GENE] AND Ranidae[ORGN]" | efetch -format uid | head -n 30 | efetch -db nuccore -format fasta > pomc_Ranidae.fasta
 
-# Organizar carpeta con MUSCLE2
+# Organizar carpeta con MUSCLE
 
 ## Crear carpeta nueva para mantener orden
 cp ../../muscle3.8.31_i86linux64 .
-perl -pe 's/(>\w+.\d)\s(\w+)\s(\w+).*/\1_\2_\3/g' cytb_Ranidae.fasta > Ranidae.cytb.fasta
-perl -pe 's/(>\w+.\d)\s(\w+)\s(\w+).*/\1_\2_\3/g' rag1_Ranidae.fasta > Ranidae.rag1.fasta
-perl -pe 's/(>\w+.\d)\s(\w+)\s(\w+).*/\1_\2_\3/g' pomc_Ranidae.fasta > Ranidae.pomc.fasta
+perl -pe 's/(>\w+.\d)\s(\w+)\s(\w+).*/\1_\2_\3_cytb/g' cytb_Ranidae.fasta > Ranidae.cytb.fasta
+perl -pe 's/(>\w+.\d)\s(\w+)\s(\w+).*/\1_\2_\3_rag1/g' rag1_Ranidae.fasta > Ranidae.rag1.fasta
+perl -pe 's/(>\w+.\d)\s(\w+)\s(\w+).*/\1_\2_\3_pomc/g' pomc_Ranidae.fasta > Ranidae.pomc.fasta
 
 
 # Alineamiento con MUSCLE
@@ -33,10 +33,13 @@ do iqtree2 -s $filename
 done
 
 # Combinar árboles
-cat *.treefile > Ranidae.All.trees
+cat *.treefile > All.trees
 
-## Final
-## Descarga Ranidae.All.trees desde Hoffman a tu computador personal
-# scp dechavez@hoffman2.idre.ucla.edu:/u/scratch/d/dechavez/Bioinformatica-PUCE/RepotenBio/MadisonCa/ProyectoF/Secuencias_muscle/Ranidae.All.trees .
-## Abrirlo con FigTree para inspección
-# Elegir la opcion Trees y marcar la opcion Transform branches
+# Convertir a Astral
+astral=/u/scratch/d/dechavez/Bioinformatica-PUCE/RepotenBio/OneHundred.Genes.Canids/Astral/astral.5.7.8.jar
+java -jar $astral -i All.trees -o Astral.Ranidae.tree
+
+## Descarga Astral.Ranidae.trees desde Hoffman a tu computador personal
+# scp dechavez@hoffman2.idre.ucla.edu:/u/scratch/d/dechavez/Bioinformatica-PUCE/RepotenBio/MadisonCa/ProyectoF/Secuencias_muscle/Astral.Ranidae.trees .
+# Abrirlo con FigTree para inspección
+# Modificar el tamaño de las ramas, 30 secuencias de los tres genes
