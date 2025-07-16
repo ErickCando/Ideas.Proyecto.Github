@@ -1,4 +1,3 @@
-  GNU nano 8.3                                                                            ProyectoFinal.sh
 # Programas
 
 * cd /u/scratch/d/dechavez/Bioinformatica-PUCE/RepotenBio/MadisonCa/ProyectoF
