@@ -10,6 +10,7 @@
 * ./datasets download gene symbol
 * muscle3.8.31_i86linux64
 * module load iqtree/2.2.2.6
+* Astral
 * FigTree
 
 ## Q4. Sube una foto que represente tu organismo o grupo de organismo.
