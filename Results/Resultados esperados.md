@@ -17,7 +17,8 @@
 * Clados monofiléticos: Muchos grupos forman clados monofiléticos, lo que sugiere una herencia genética clara desde el ancestro común sin eventos de hibridación o transferencia horizontal evidentes en esos linajes
  
 ## Filogenia con ID_Espeice
-* Se espera que la Filogenia muestre 30 secuencias con cada Gen seleccionado (RAG1, POMC, CYTB) donde se observe el ID_Especie_Gen, sin embargo, tambien se pueden observar secuencias que no pudieron filtrarse con la edicion de Hoffman para mostrar ID_Especie_Gen. 
+* Se espera que la Filogenia muestre 30 secuencias con cada Gen seleccionado (RAG1, POMC, CYTB) donde se observe el ID_Especie_Gen, sin embargo, tambien se pueden observar secuencias que no pudieron filtrarse con la edicion de Hoffman para mostrar ID_Especie_Gen. Las secuencias incompletas estan alejadas de las principales. 
+
 ![ ](https://i.ibb.co/1tchWxXT/Astral-Ranidae-tree.jpg)
 
 ## Secuencias editadas
