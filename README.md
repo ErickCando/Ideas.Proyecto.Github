@@ -18,14 +18,13 @@
 * datasets (NCBI CLI): descarga de secuencias genéticas por símbolo
 * muscle3.8.31_i86linux64: alineamiento de secuencias por gen
 * iqtree/2.2.2.6: inferencia filogenética por gen¨
-* ASTRAL para reconstruir árboles filogenéticos a partir de múltiples árboles génicos
+* astral.5.7.8.jar: para reconstruir árboles filogenéticos a partir de múltiples árboles génicos
 * FigTree: visualización y edición gráfica de árboles filogenéticos
 
 ## Procedimeinto de trabajo
 
 # 1. Conexión a la supercomputadora (Hofmann)
-Primero, se accede al sistema remoto utilizando el siguiente comando:
-ssh dechavez@hoffman2.idre.ucla.edu
+* Primero, se accede al sistema remoto utilizando el siguiente comando: ssh dechavez@hoffman2.idre.ucla.edu
 
 # 2. Solicitud de un nodo de cómputo
 * Una vez dentro, se solicita un nodo de trabajo con: qrsh -l h_data=30G,h_rt=1:00:00
