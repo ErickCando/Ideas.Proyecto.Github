@@ -6,7 +6,12 @@
 * astral.5.7.8.jar: construir filogenia apartir de multiples arboles genicos
 * FigTree: visualización y edición gráfica de árboles filogenéticos
 
-## Proceso
+## Requisitos del sistema
+* Unix/Linux
+* Acceso a terminal con bash
+* Conexión a internet para descarga de datos
+
+## Procedimiento
 * cd /u/scratch/d/dechavez/Bioinformatica-PUCE/RepotenBio/MadisonCa/ProyectoF
 * mkdir -p Secuencias_muscle
 * cd Secuencias_muscle
@@ -46,16 +51,4 @@
 * scp dechavez@hoffman2.idre.ucla.edu:/u/scratch/d/dechavez/Bioinformatica-PUCE/RepotenBio/MadisonCa/ProyectoF/Secuencias_muscle/Astral.Ranidae.tree .
 
 ## Abrirlo con FigTree para inspección
-* Modificar el tamaño de las ramas y etiquetas para mejor observacion 
-
-## Herramientas utilizadas
-* datasets (NCBI CLI): descarga de secuencias genéticas por símbolo
-* muscle3.8.31_i86linux64: alineamiento de secuencias por gen
-* iqtree/2.2.2.6: inferencia filogenética por gen
-* astral.5.7.8.jar: construir filogenia apartir de multiples arboles genicos
-* FigTree: visualización y edición gráfica de árboles filogenéticos
-
-## Requisitos del sistema
-* Unix/Linux
-* Acceso a terminal con bash
-* Conexión a internet para descarga de datos
+* Modificar el tamaño de las ramas y etiquetas para mejor observacion.
