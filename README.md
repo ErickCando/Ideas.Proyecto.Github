@@ -32,12 +32,12 @@
 * Crear un directorio con mkdir -p Secuencias_muscle
 * Entrar con cd Secuencias_muscle
 
-## 3. Descargar genes con NCBI datasets en hoffman
+## 3. Descargar genes con NCBI datasets en Hoffman
 * /u/scratch/d/dechavez/Bioinformatica-PUCE/MastBio/edirect/esearch -db nuccore -query "rag1[GENE] AND Ranidae[ORGN]" | efetch -format uid | head -n 30 | efetch -db nuccore -format fasta > rag1_Ranidae.fasta
 * /u/scratch/d/dechavez/Bioinformatica-PUCE/MastBio/edirect/esearch -db nuccore -query "cytb[GENE] AND Ranidae[ORGN]" | efetch -format uid | head -n 30 | efetch -db nuccore -format fasta > cytb_Ranidae.fasta
 * /u/scratch/d/dechavez/Bioinformatica-PUCE/MastBio/edirect/esearch -db nuccore -query "pomc[GENE] AND Ranidae[ORGN]" | efetch -format uid | head -n 30 | efetch -db nuccore -format fasta > pomc_Ranidae.fasta
 
-## 4. Preparación de las secuencias (edición en hoffman del alineamiento)
+## 4. Preparación de las secuencias (edición del alineamiento en Hoffman)
 * Copiar muscle3.8.31_i86linux64 a la carpeta
 * perl -pe 's/(>\w+.\d)\s(\w+)\s(\w+).*/\1_\2_\3_cytb/g' cytb_Ranidae.fasta > Ranidae.cytb.fasta
 * perl -pe 's/(>\w+.\d)\s(\w+)\s(\w+).*/\1_\2_\3_rag1/g' rag1_Ranidae.fasta > Ranidae.rag1.fasta
