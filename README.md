@@ -56,14 +56,14 @@
 * done 
 
 ## 7. Combinar árboles
-* cat *.treefile > Ranidae.All.trees
+* cat *.treefile > All.trees
 
 ## 8. Convertir a Astral
 * astral=/u/scratch/d/dechavez/Bioinformatica-PUCE/RepotenBio/OneHundred.Genes.Canids/Astral/astral.5.7.8.jar
 * java -jar $astral -i All.trees -o Astral.Ranidae.tree
 
-## 9. Descarga Ranidae.All.trees desde Hoffman a tu computador personal
-* scp dechavez@hoffman2.idre.ucla.edu:/u/scratch/d/dechavez/Bioinformatica-PUCE/RepotenBio/MadisonCa/ProyectoF/Secuencias_muscle/Ranidae.All.trees .
+## 9. Descarga Astral.Ranidae.tree desde Hoffman a tu computador personal
+* scp dechavez@hoffman2.idre.ucla.edu:/u/scratch/d/dechavez/Bioinformatica-PUCE/RepotenBio/MadisonCa/ProyectoF/Secuencias_muscle/Astral.Ranidae.tree .
 
 ## Abrirlo con FigTree para inspección
 * Modificar el tamaño de las ramas y etiquetas para mejor observacion 
