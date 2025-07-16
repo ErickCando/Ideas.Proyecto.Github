@@ -39,7 +39,7 @@ cat *.treefile > All.trees
 astral=/u/scratch/d/dechavez/Bioinformatica-PUCE/RepotenBio/OneHundred.Genes.Canids/Astral/astral.5.7.8.jar
 java -jar $astral -i All.trees -o Astral.Ranidae.tree
 
-## Descarga Astral.Ranidae.trees desde Hoffman a tu computador personal
+## Descarga Astral.Ranidae.tree desde Hoffman a tu computador personal
 # scp dechavez@hoffman2.idre.ucla.edu:/u/scratch/d/dechavez/Bioinformatica-PUCE/RepotenBio/MadisonCa/ProyectoF/Secuencias_muscle/Astral.Ranidae.tree .
 # Abrirlo con FigTree para inspección
-# Modificar el tamaño de las ramas y etiquetas, 30 secuencias de tres genes en ls familia Ranidae
+# Modificar el tamaño de las ramas y etiquetas, 30 secuencias de tres genes en la familia Ranidae
