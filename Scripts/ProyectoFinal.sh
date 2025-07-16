@@ -42,4 +42,4 @@ java -jar $astral -i All.trees -o Astral.Ranidae.tree
 ## Descarga Astral.Ranidae.trees desde Hoffman a tu computador personal
 # scp dechavez@hoffman2.idre.ucla.edu:/u/scratch/d/dechavez/Bioinformatica-PUCE/RepotenBio/MadisonCa/ProyectoF/Secuencias_muscle/Astral.Ranidae.trees .
 # Abrirlo con FigTree para inspección
-# Modificar el tamaño de las ramas, 30 secuencias de los tres genes
+# Modificar el tamaño de las ramas y etiquetas, 30 secuencias de tres genes en ls familia Ranidae
