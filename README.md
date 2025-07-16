@@ -23,7 +23,7 @@
 
 ## Procedimeinto de trabajo
 
-## 1. Conexión a la supercomputadora (Hofmann)
+## 1. Conexión a la supercomputadora (Hoffman)
 * Primero, se accede al sistema remoto utilizando el siguiente comando: ssh dechavez@hoffman2.idre.ucla.edu
 
 ## 2. Solicitud de un nodo de cómputo
